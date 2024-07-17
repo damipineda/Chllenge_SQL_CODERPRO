@@ -21,6 +21,7 @@ GROUP BY u.DisplayName;
 
 
 /*Cuarta consulta Display name de usuarios que han realizado 100 comentarios*/
+
 SELECT Top 200
 DisplayName 
 FROM Users
@@ -37,7 +38,7 @@ UPDATE Users
 SET Location = 'Desconocido'
 WHERE Location IS NULL OR Location = '';
 
-Print 'Actualizaciï¿½n realizada correctamente'; 
+Print 'Actualización realizada correctamente'; 
 
 /* Para ver*/
 SELECT TOP 200 Id, DisplayName, Location
@@ -45,7 +46,7 @@ From Users
 
 WHERE Location = 'Desconocido';
 
-/*6 consulta todos los comentarios realizados por usuarios con menos de 100 de reputaciï¿½n eliminados*/
+/*6 consulta todos los comentarios realizados por usuarios con menos de 100 de reputación eliminados*/
 
 DELETE Comments
 FROM Comments
@@ -66,7 +67,7 @@ FROM
 ORDER BY
 	TotalPosts DESC, Users.DisplayNAme;
 
-/* 8 Muestra las 10 publicaciones mï¿½s populares basadas en la puntuaciï¿½n */
+/* 8 Muestra las 10 publicaciones más populares basadas en la puntuación */
 
 SELECT TOP 10 Title, Score
 FROM Posts
@@ -74,7 +75,7 @@ WHERE
 Title IS NOT NULl
 ORDER BY Score DESC;
  
- /* 9 Muestra los 5 comentarios mï¿½s recientes de la tabla */
+ /* 9 Muestra los 5 comentarios más recientes de la tabla */
 SELECT TOP 5 Text, CreationDate
 FROM Comments
 ORDER BY CreationDate DESC;
